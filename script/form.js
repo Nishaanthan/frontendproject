@@ -27,34 +27,31 @@ function showDataForTask(fileData) {
 
  */
 
-
-
-
-        function takeFileFromJson() {
-            $.ajax({
-                type: "GET",
-                async: "false",
-                url: "data/file.json",
-                success: function (response) {
-                    //showDataForTask(response);
-                     let data =response
-                    document.getElementById("formFile").innerHTML=data.contact.standard;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.marketinginone;
-                    document.getElementById('formFile').innerHTML=data.contact.standard.email;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.datatype;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.required;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.html_label;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.html_placeholder;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.html_hidden_field;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.field_type;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.php_type;
-                    document.getElementById("formFile").innerHTML=data.contact.standard.regex;
-
-
-
-                }
-            });
+function takeFileFromJson() {
+    $.ajax({
+        type: "GET",
+        async: "false",
+        // url: "data/file.json",
+        url: "https://raw.githubusercontent.com/Nishaanthan/frontendproject/main/data/file.json",
+        crossDomain: true,
+        success: function (response) {
+            //showDataForTask(response);
+            let data = response
+            console.log(data)
+            document.getElementById("formFile").innerHTML = data.contact.standard;
+            document.getElementById("formFile").innerHTML = data.contact.standard.marketinginone;
+            document.getElementById('formFile').innerHTML = data.contact.standard.email;
+            document.getElementById("formFile").innerHTML = data.contact.standard.datatype;
+            document.getElementById("formFile").innerHTML = data.contact.standard.required;
+            document.getElementById("formFile").innerHTML = data.contact.standard.html_label;
+            document.getElementById("formFile").innerHTML = data.contact.standard.html_placeholder;
+            document.getElementById("formFile").innerHTML = data.contact.standard.html_hidden_field;
+            document.getElementById("formFile").innerHTML = data.contact.standard.field_type;
+            document.getElementById("formFile").innerHTML = data.contact.standard.php_type;
+            document.getElementById("formFile").innerHTML = data.contact.standard.regex;
         }
+    });
+}
 
 
 
