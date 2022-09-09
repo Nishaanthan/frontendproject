@@ -37,7 +37,7 @@ function takeFileFromJson() {
         success: function (response) {
             //showDataForTask(response);
             let data = JSON.parse(response)
-            console.log(data["contact"])
+            console.log(data.contact)
             document.getElementById("formFile").innerHTML = data.contact.standard;
             document.getElementById("formFile").innerHTML = data.contact.standard.marketinginone;
             document.getElementById('formFile').innerHTML = data.contact.standard.email;
