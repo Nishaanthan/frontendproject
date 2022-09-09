@@ -37,6 +37,7 @@ function takeFileFromJson() {
         success: function (response) {
             //showDataForTask(response);
             let data = JSON.parse(response)
+            console.log(data.contact.standard.length)
             for (const field of data.contact.standard) {
                 document.getElementById("formFile").innerHTML += document.getElementById("formFile").innerHTML + `<input type="$field.datatype">`;
             }
