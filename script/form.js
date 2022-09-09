@@ -36,7 +36,7 @@ function takeFileFromJson() {
         crossDomain: true,
         success: function (response) {
             //showDataForTask(response);
-            let data = response
+            let data = JSON.parse(response)
             console.log(data["contact"])
             document.getElementById("formFile").innerHTML = data.contact.standard;
             document.getElementById("formFile").innerHTML = data.contact.standard.marketinginone;
