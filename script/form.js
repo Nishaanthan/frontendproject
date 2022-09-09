@@ -38,7 +38,7 @@ function takeFileFromJson() {
             //showDataForTask(response);
             let data = JSON.parse(response)
             for (const field of data.contact.standard) {
-                document.getElementById("formFile").innerHTML += `<input type="$field.datatype">`;
+                document.getElementById("formFile").innerHTML += `<input type="${field.datatype}"> </br>`;
             }
         }
     });
