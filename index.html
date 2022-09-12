@@ -15,15 +15,16 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script
-            src="https://code.jquery.com/jquery-3.6.0.js"
-            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-            crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="script/form.js"></script>
 
@@ -32,7 +33,29 @@
 <body>
 <h1>Hello there</h1>
 <p id="formFile"></p>
-
+<label for="field_name">field_name</label><br>
+<input type="text" id="field_name" name=""><br>
+<label for="marketing-in-one">marketing-in-one</label><br>
+<input type="text" id="marketing-in-one"><br>
+<label for="email">email</label><br>
+<input type="email" id="email"><br>
+<label for="datatype">datatype</label><br>
+<input type="text" id="datatype"><br>
+<label for="required">required</label><br>
+<input type="text" id="required" required><br>
+<label for="html_label">html_label</label><br>
+<input type="text" id="html_label"><br>
+<label for="html_placeholder">html_placeholder</label><br>
+<input type="text" id="html_placeholder" placeholder="email"><br>
+<label >html_hidden_field</label><br>
+<input type="hidden"><br>
+<label for="field_type" >field_type</label><br>
+<input type="text" id="field_type"><br>
+<label for="php_type">php_type</label><br>
+<input type="text" id="php_type" ><br>
+<label for="regex">regex</label><br>
+<input type="number" id="regex" value=""><br><br>
+<input type="submit">
 </form>
 </body>
 </html>
