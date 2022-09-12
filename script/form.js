@@ -30,18 +30,20 @@ function takeFileFromJson() {
     $.ajax({
         type: "GET",
         async: "false",
-        url: "data/file.json",
+        url: "https://jyothipriyabhuvanagiri.github.io/frontendproject/data/data.json",
         success: function (response) {
             //showDataForTask(response);
-            let dataFile =response;
+            let dataFile = response;
 
             for (let formParameters of dataFile.contact.standard) {
-               // document.getElementById("formFile").innerHTML += formParameters["field_name"] + "</br>"
-                //document.getElementById("formFile").innerHTML += `<input type="${formParameters}"> </br></br>`;
+                document.getElementById("formFile").innerHTML += `<label> ${formParameters["html_placeholder"]} </label> </br>`
+                document.getElementById("formFile").innerHTML += `<input name="${formParameters.field_name}" type="${formParameters.type}" > </br></br>`;
             }
+            document.getElementById("formFile").innerHTML += `<button id="submitButton" type="submit">Submit</button>`;
         }
     });
 }
+
 
 
 
